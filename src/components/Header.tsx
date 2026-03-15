@@ -75,9 +75,9 @@ export default function Header() {
             <Image
               src="/logo.jpg"
               alt="Top Choice Detailing - Veteran Owned"
-              width={180}
-              height={60}
-              className="h-10 md:h-14 w-auto transition-transform group-hover:scale-105"
+              width={280}
+              height={90}
+              className="h-16 md:h-20 w-auto transition-transform group-hover:scale-105"
               priority
             />
           </Link>
