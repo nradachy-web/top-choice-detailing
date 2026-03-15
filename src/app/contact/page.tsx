@@ -192,7 +192,7 @@ export default function ContactPage() {
                 <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
                   <iframe
                     title="Top Choice Detailing Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48882.82965498459!2d-86.43!3d39.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca5a3e2bcb3e7%3A0x1fd9d3e3e3e3e3e3!2sAvon%2C+IN!5e0!3m2!1sen!2sus!4v1"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.2106286636213!2d-86.3817408!3d39.7349193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d31927ce9c402d5%3A0x84a0e84b50c76e4!2sTop%20Choice%20Detailing!5e0!3m2!1sen!2sus!4v1773575111185!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
