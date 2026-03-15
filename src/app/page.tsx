@@ -24,49 +24,49 @@ const services = [
     description:
       "Deep cleaning, leather conditioning, stain removal, and odor elimination. Your cabin restored to showroom condition.",
     href: "/interior-detailing",
-    image: "/images/interior-detailing.jpg",
+    image: "/images/interior-detailing.png",
   },
   {
     title: "Exterior Detailing",
     description:
       "Hand wash, clay bar treatment, polish, and premium wax protection. Head-turning shine every time.",
     href: "/exterior-detailing",
-    image: "/images/exterior-detailing.jpg",
+    image: "/images/exterior-detailing.png",
   },
   {
     title: "Ceramic Coating",
     description:
       "Industry-leading ceramic protection that lasts years. Unmatched gloss, hydrophobic finish, UV protection.",
     href: "/ceramic-coating",
-    image: "/images/ceramic-coating.jpg",
+    image: "/images/ceramic-coating.png",
   },
   {
     title: "Window Tinting",
     description:
       "Professional-grade window tint installation. UV protection, heat rejection, privacy, and sleek aesthetics.",
     href: "/window-tinting",
-    image: "/images/window-tinting.jpg",
+    image: "/images/window-tinting.png",
   },
   {
     title: "Motorcycle Detailing",
     description:
       "Specialized care for your bike. Chrome polishing, paint correction, and protective coatings built for riders.",
     href: "/motorcycle-detailing",
-    image: "/images/motorcycle-detailing.jpg",
+    image: "/images/motorcycle-detailing.png",
   },
   {
     title: "Fleet Detailing",
     description:
       "Keep your business fleet looking professional. Volume pricing, flexible scheduling, consistent results.",
     href: "/fleet-detailing",
-    image: "/images/fleet-detailing.jpg",
+    image: "/images/fleet-detailing.png",
   },
   {
     title: "Paint Correction",
     description:
       "Multi-stage paint correction to remove swirl marks, scratches, and oxidation. Factory-fresh finish restored.",
     href: "/paint-correction",
-    image: "/images/paint-correction.jpg",
+    image: "/images/paint-correction.png",
   },
 ];
 
