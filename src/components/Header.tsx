@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavLink {
   label: string;
@@ -70,18 +71,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-lg font-[family-name:var(--font-catamaran)] transition-transform group-hover:scale-105">
-              TC
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg font-extrabold text-primary-dark font-[family-name:var(--font-catamaran)] tracking-tight">
-                Top Choice
-              </span>
-              <span className="text-[11px] uppercase tracking-widest text-accent font-semibold -mt-0.5">
-                Detailing
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.jpg"
+              alt="Top Choice Detailing - Veteran Owned"
+              width={180}
+              height={60}
+              className="h-10 md:h-14 w-auto transition-transform group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

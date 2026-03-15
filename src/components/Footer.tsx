@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   { label: "Interior Detailing", href: "/interior-detailing" },
@@ -28,18 +29,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white font-bold text-lg font-[family-name:var(--font-catamaran)]">
-                TC
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-lg font-extrabold font-[family-name:var(--font-catamaran)] tracking-tight">
-                  Top Choice
-                </span>
-                <span className="text-[11px] uppercase tracking-widest text-accent-light font-semibold -mt-0.5">
-                  Detailing
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.jpg"
+                alt="Top Choice Detailing - Veteran Owned"
+                width={180}
+                height={60}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
               Veteran owned and operated auto detailing in Avon, Indiana.
@@ -111,7 +108,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+13175550147"
+                  href="tel:+13176637677"
                   className="text-sm text-white/60 hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg
@@ -127,7 +124,7 @@ export default function Footer() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  (317) 555-0147
+                  (317) 663-7677
                 </a>
               </li>
               <li>
@@ -223,6 +220,24 @@ export default function Footer() {
               Terms of Service
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Modern Apex Attribution */}
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-center">
+          <p className="text-[11px] text-white/30">
+            Website designed &amp; developed by{" "}
+            <a
+              href="https://modernapexstrategies.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white/60 transition-colors underline underline-offset-2"
+            >
+              Modern Apex Strategies
+            </a>
+            {" "}| modernapexstrategies.com
+          </p>
         </div>
       </div>
     </footer>

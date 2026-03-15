@@ -99,6 +99,23 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
+/* Animation delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Ensure delayed animations start invisible */
+.animate-fade-in-up,
+.animate-fade-in {
+  opacity: 0;
+}
+
 /* Gold star color */
 .text-star {
   color: #f59e0b;

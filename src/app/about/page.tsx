@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -44,101 +45,194 @@ const values = [
   },
 ];
 
+const stats = [
+  { value: "500+", label: "Vehicles Detailed" },
+  { value: "5.0", label: "Star Rating" },
+  { value: "100%", label: "Satisfaction Rate" },
+  { value: "3+", label: "Years of Excellence" },
+];
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#082f6d] to-[#2970e1] text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2),transparent_70%)]" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[60vh] flex items-center">
+        <Image
+          src="/images/about-hero.png"
+          alt="Top Choice Detailing workspace"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#082f6d]/90 via-[#082f6d]/75 to-[#082f6d]/50" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
           <div className="max-w-3xl">
-            <p className="text-blue-200 font-semibold text-sm uppercase tracking-widest mb-4">
-              Our Story
+            <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-4">
+              Veteran Owned &amp; Operated
             </p>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white">
               Built on Service.{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
                 Driven by Passion.
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-2xl">
               Top Choice Detailing is more than a business. It is the
               culmination of a lifetime love for automobiles, forged through
               military service, and dedicated to the communities of Central
               Indiana.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Chance's Story */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              Meet Chance - Veteran, Car Enthusiast, Perfectionist
-            </h2>
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-              <p className="leading-relaxed">
-                For as long as he can remember, Chance has had a deep passion for
-                automobiles. Growing up, weekends were spent in the garage,
-                washing, waxing, and obsessing over every inch of paint. What
-                started as a hobby quickly became a calling - the satisfaction of
-                transforming a neglected vehicle into something that looks better
-                than the day it rolled off the lot.
-              </p>
-              <p className="leading-relaxed">
-                That same drive for excellence led Chance to serve in the United
-                States military, where the values of discipline, precision, and
-                unwavering commitment were not just taught - they were lived
-                every single day. The military taught him that good enough is
-                never good enough, that attention to detail separates the
-                ordinary from the exceptional, and that serving others is the
-                highest calling.
-              </p>
-              <p className="leading-relaxed">
-                After completing his service, Chance brought those values home to
-                Avon, Indiana, and channeled them into what he knows best -
-                making vehicles look incredible. Top Choice Detailing was born
-                from the belief that every vehicle owner in Central Indiana
-                deserves access to truly professional auto detailing, delivered
-                with integrity, skill, and genuine care.
-              </p>
-              <p className="leading-relaxed font-medium text-gray-900">
-                Today, Top Choice Detailing serves hundreds of customers across
-                Avon, Plainfield, Brownsburg, Mooresville, Indianapolis, and
-                beyond. Every vehicle that comes through our hands receives the
-                same meticulous attention - because that is the only standard we
-                know.
-              </p>
+            <div className="mt-8">
+              <a
+                href="tel:+13176637677"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                (317) 663-7677
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Logo + Owner Story Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image Side */}
+            <div className="flex flex-col items-center gap-8">
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#2970e1]/20 to-[#082f6d]/10 rounded-2xl blur-xl" />
+                <div className="relative bg-white rounded-2xl shadow-2xl p-8 flex items-center justify-center">
+                  <Image
+                    src="/logo.jpg"
+                    alt="Top Choice Detailing Logo"
+                    width={400}
+                    height={200}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-blue-50 rounded-full px-6 py-3">
+                <svg className="w-5 h-5 text-[#2970e1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+                <span className="text-sm font-semibold text-[#082f6d]">Veteran Owned &amp; Operated in Avon, Indiana</span>
+              </div>
+            </div>
+
+            {/* Story Side */}
+            <div>
+              <p className="text-[#2970e1] font-semibold text-sm uppercase tracking-widest mb-3">
+                The Founder
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Meet Chance - Veteran, Car Enthusiast, Perfectionist
+              </h2>
+              <div className="space-y-6 text-gray-700">
+                <p className="text-lg leading-relaxed">
+                  For as long as he can remember, Chance has had a deep passion for
+                  automobiles. Growing up, weekends were spent in the garage,
+                  washing, waxing, and obsessing over every inch of paint. What
+                  started as a hobby quickly became a calling - the satisfaction of
+                  transforming a neglected vehicle into something that looks better
+                  than the day it rolled off the lot.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  That same drive for excellence led Chance to serve in the United
+                  States military, where the values of discipline, precision, and
+                  unwavering commitment were not just taught - they were lived
+                  every single day.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  After completing his service, Chance brought those values home to
+                  Avon, Indiana, and channeled them into what he knows best -
+                  making vehicles look incredible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Military to Detailing Excellence */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <p className="text-[#2970e1] font-semibold text-sm uppercase tracking-widest mb-3">
+              From Service to Service
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Military Discipline Meets Detailing Excellence
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              The military taught Chance that good enough is never good enough, that
+              attention to detail separates the ordinary from the exceptional, and
+              that serving others is the highest calling. Top Choice Detailing was
+              born from the belief that every vehicle owner in Central Indiana
+              deserves access to truly professional auto detailing, delivered with
+              integrity, skill, and genuine care.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                military: "Discipline & Standards",
+                detailing: "Refined processes with no shortcuts - every step is intentional and every detail matters.",
+              },
+              {
+                military: "Attention to Detail",
+                detailing: "Spots others miss, we catch. Corners others cut, we perfect. Hyper-awareness in every job.",
+              },
+              {
+                military: "Commitment to Service",
+                detailing: "You are not just a customer - you are someone we are honored to serve, every single time.",
+              },
+              {
+                military: "Accountability",
+                detailing: "We stand behind our work 100%. If something is not right, we make it right. No excuses.",
+              },
+            ].map((item) => (
+              <div
+                key={item.military}
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#082f6d] to-[#2970e1] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900">{item.military}</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed pl-[52px]">{item.detailing}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission Statement */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <p className="text-[#2970e1] font-semibold text-sm uppercase tracking-widest mb-3">
+            Why We Do This
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             Our Mission
           </h2>
-          <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100">
+          <div className="bg-gradient-to-br from-[#082f6d] to-[#2970e1] rounded-2xl p-10 md:p-14 shadow-xl">
             <svg
-              className="w-10 h-10 text-[#2970e1] mx-auto mb-6"
-              fill="none"
-              stroke="currentColor"
+              className="w-12 h-12 text-blue-200/60 mx-auto mb-6"
+              fill="currentColor"
               viewBox="0 0 24 24"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-              />
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed italic">
+            <p className="text-xl md:text-2xl text-white leading-relaxed italic">
               To deliver excellence in every detail - protecting your investment,
               exceeding your expectations, and earning your trust through
               results, not promises. We believe every vehicle and every customer
@@ -149,9 +243,12 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
+            <p className="text-[#2970e1] font-semibold text-sm uppercase tracking-widest mb-3">
+              What We Stand For
+            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
             </h2>
@@ -164,11 +261,11 @@ export default function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow duration-200 text-center"
+                className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#082f6d] to-[#2970e1] text-white rounded-full mb-5">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#082f6d] to-[#2970e1] text-white rounded-2xl mb-6 shadow-lg">
                   <svg
-                    className="w-7 h-7"
+                    className="w-8 h-8"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -193,63 +290,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Veteran Owned Matters */}
-      <section className="py-20 bg-gray-50">
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Why Veteran Owned Matters
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Discipline That Shows in the Results",
-                  description:
-                    "Military service instills a level of discipline that translates directly into our work. Every process is refined, every step is intentional, and every detail matters. There are no shortcuts.",
-                },
-                {
-                  title: "Attention to Detail Is in Our DNA",
-                  description:
-                    "In the military, missing a detail can have serious consequences. We bring that same hyper-awareness to auto detailing. Spots others miss, we catch. Corners others cut, we perfect.",
-                },
-                {
-                  title: "A Commitment to Service - Not Just a Job",
-                  description:
-                    "Veterans understand that serving others is a privilege, not a chore. When you bring your vehicle to Top Choice, you are not just a customer - you are someone we are honored to serve.",
-                },
-                {
-                  title: "Accountability You Can Count On",
-                  description:
-                    "We stand behind our work 100%. If something is not right, we make it right. No excuses, no runaround. That is the veteran way.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white rounded-xl p-6 shadow-sm flex gap-4"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-blue-100 text-[#082f6d] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
+          <div className="bg-gradient-to-br from-[#082f6d] to-[#2970e1] rounded-3xl p-10 md:p-16 shadow-2xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                The Numbers Speak for Themselves
+              </h2>
+              <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+                Every number represents a real person who trusted us with their
+                vehicle. We do not take that lightly.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                    <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">
+                      {stat.value}
+                    </p>
+                    <p className="text-blue-200 font-medium text-sm uppercase tracking-wide">
+                      {stat.label}
                     </p>
                   </div>
                 </div>
@@ -259,63 +321,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Commitment */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Our Commitment to You
-          </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            When you choose Top Choice Detailing, you are choosing a team that
-            is personally invested in making your vehicle look its absolute best.
-            We are not here to do the minimum - we are here to exceed what you
-            thought was possible.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-8 mb-10">
-            {[
-              {
-                stat: "500+",
-                label: "Vehicles Detailed",
-              },
-              {
-                stat: "100%",
-                label: "Satisfaction Rate",
-              },
-              {
-                stat: "5.0",
-                label: "Average Rating",
-              },
-            ].map((item) => (
-              <div key={item.label}>
-                <p className="text-4xl md:text-5xl font-extrabold text-[#2970e1]">
-                  {item.stat}
-                </p>
-                <p className="text-gray-600 font-medium mt-1">{item.label}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-gray-500 text-sm">
-            Every number represents a real person who trusted us with their
-            vehicle. We do not take that lightly.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-[#082f6d] to-[#2970e1] text-white py-20">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.3),transparent_70%)]" />
-        </div>
+      {/* CTA Section with Background Image */}
+      <section className="relative py-24 md:py-32">
+        <Image
+          src="/images/hero-cta.png"
+          alt="Professional auto detailing"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#082f6d]/90 via-[#082f6d]/80 to-[#082f6d]/70" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
             Ready to Experience the Top Choice Difference?
           </h2>
-          <p className="text-lg text-blue-100 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-blue-100 mb-4 max-w-2xl mx-auto">
             Whether it is your daily driver, weekend car, motorcycle, or
             business fleet - we are ready to deliver results that speak for
             themselves.
           </p>
-          <p className="text-sm text-blue-200 mb-8">
+          <p className="text-blue-200 mb-10">
             Book today and see why Avon and Central Indiana trust Top Choice
             Detailing.
           </p>
@@ -339,12 +363,15 @@ export default function AboutPage() {
                 />
               </svg>
             </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-lg"
+            <a
+              href="tel:+13176637677"
+              className="inline-flex items-center justify-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-lg gap-2"
             >
-              Explore Our Services
-            </Link>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call (317) 663-7677
+            </a>
           </div>
         </div>
       </section>
