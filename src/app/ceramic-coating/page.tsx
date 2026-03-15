@@ -63,10 +63,10 @@ export default function CeramicCoatingPage() {
               Get a Free Quote
             </Link>
             <a
-              href="tel:+13176637677"
+              href="tel:+13865887840"
               className="inline-block border-2 border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-colors"
             >
-              Call (317) 663-7677
+              Call (386) 588-7840
             </a>
           </div>
         </div>
@@ -366,10 +366,10 @@ export default function CeramicCoatingPage() {
               Get Your Lifetime Coating
             </Link>
             <a
-              href="tel:+13176637677"
+              href="tel:+13865887840"
               className="inline-block border-2 border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-colors"
             >
-              (317) 663-7677
+              (386) 588-7840
             </a>
           </div>
         </div>

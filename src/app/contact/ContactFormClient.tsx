@@ -59,8 +59,8 @@ export default function ContactFormClient() {
         </p>
         <p className="text-green-600 text-sm mb-8">
           Prefer to talk now? Call us at{" "}
-          <a href="tel:+13176637677" className="font-semibold underline hover:text-green-800">
-            (317) 663-7677
+          <a href="tel:+13865887840" className="font-semibold underline hover:text-green-800">
+            (386) 588-7840
           </a>
         </p>
         <button
@@ -216,8 +216,8 @@ export default function ContactFormClient() {
       {/* Phone Fallback */}
       <p className="text-center text-sm text-gray-500 pt-2">
         Prefer to call?{" "}
-        <a href="tel:+13176637677" className="text-[#2970e1] font-semibold hover:underline">
-          (317) 663-7677
+        <a href="tel:+13865887840" className="text-[#2970e1] font-semibold hover:underline">
+          (386) 588-7840
         </a>
       </p>
     </form>
