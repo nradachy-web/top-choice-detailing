@@ -75,7 +75,7 @@ export default function ContactFormClient() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input type="hidden" name="access_key" value="8dc334dd-941f-4dd7-9134-1cc99b0ff3f7" />
       <input type="hidden" name="subject" value="New Contact Form Submission - Top Choice Detailing" />
 
       {/* Name */}
